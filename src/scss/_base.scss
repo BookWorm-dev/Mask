@@ -34,7 +34,10 @@ body {
 	&--hero {
 		position: relative;
 		display: flex;
-		max-height: 89.1rem;
+		min-height: 89.1rem;
+	}
+	&--homepage {
+		position: relative;
 	}
 }
 
@@ -54,6 +57,34 @@ body {
 		border-bottom-left-radius: 0;
 	}
 }
+
 .contain-img {
 	@extend %contain_img;
+}
+.cover-img--reflection {
+	transform: scaleX(-1);
+}
+
+.vector-left {
+	position: absolute;
+	top: 109rem;
+	right: -33rem;
+	height: 146.1rem;
+	width: 109.3rem;
+	background-position: left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../imgs/Vector_L.svg');
+}
+
+.vector-right {
+	position: absolute;
+	top: 0rem;
+	left: -33rem;
+	width: 109.3rem;
+	height: 146.1rem;
+	background-position: left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../imgs/Vector_R.svg');
 }

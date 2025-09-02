@@ -1,0 +1,242 @@
+@use './helpers/abstracts' as *;
+
+.benefits {
+	min-width: 114.1rem;
+	margin-bottom: 13.3rem;
+
+	&__list {
+		min-height: 17.9rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 3.1rem;
+		margin: 0 auto;
+		margin-top: 7.4rem;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		padding-right: 2.1rem;
+	}
+
+	&__img-in {
+		min-width: 4rem;
+		height: 4rem;
+	}
+
+	&__title {
+		font-family: $font_1;
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		color: $color_dark;
+		margin-bottom: 1.5rem;
+	}
+
+	&__subtitle {
+		font-family: $font_1;
+		font-weight: 400;
+		font-size: 1.5rem;
+		line-height: 2.2rem;
+		color: $color_grey_2;
+	}
+}
+
+// === about ===
+.about {
+	display: flex;
+	margin-bottom: 8rem;
+
+	&--mirrored {
+		flex-direction: row-reverse;
+	}
+
+	&--grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		.about-grid__item {
+			.about-grid__img-in {
+				width: 57rem;
+				height: 61.6rem;
+			}
+
+			.about-grid__content {
+				line-height: 1.6;
+			}
+		}
+
+		.about-grid__item:nth-child(1) {
+			grid-column: 1 / 3;
+			grid-row: 1 / 3;
+			align-self: end;
+		}
+
+		.about-grid__item:nth-child(2) {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+			align-self: end;
+			z-index: 5;
+
+			.about-grid__content {
+				font-family: $font_1;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 24px;
+				padding: 6rem 3rem 5.4rem 3rem;
+
+				background: $color_blue_transparent;
+				color: $color_white;
+			}
+		}
+
+		.about-grid__item:nth-child(3) {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+			align-self: end;
+
+			.about-grid__content {
+				font-family: $font_1;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 24px;
+				padding: 8rem 3rem 13.2rem 3rem;
+				background: $color_white;
+				color: $color_grey_bolt_transparent;
+			}
+		}
+
+		.about-grid__item:nth-child(4) {
+			grid-column: 4 / 5;
+			grid-row: 1 / 2;
+			align-self: end;
+
+			.about-grid__content {
+				font-family: $font_1;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 24px;
+				padding: 8rem 3rem 13.2rem 3rem;
+				background-color: $color_blue_transparent;
+				color: $color_white;
+			}
+		}
+
+		.about-grid__item:nth-child(5) {
+			grid-column: 3 / 5;
+			grid-row: 2 / 3;
+			justify-self: end;
+			align-self: end;
+			z-index: 3;
+
+			.about-grid__content {
+				min-height: 33.4rem;
+				padding-top: 4.5rem;
+				padding-left: 3.8rem;
+				background-color: $color_accent;
+				color: $color_dark;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.about-grid__title {
+				font-family: $font_2;
+				font-weight: 700;
+				font-size: 2rem;
+				line-height: 5rem;
+				color: $color_dark;
+			}
+			.about-grid__subtitle {
+				font-family: $font_1;
+				font-weight: 400;
+				font-size: 1.5rem;
+				line-height: 2.4rem;
+				color: $color_black;
+				margin-bottom: 2.8rem;
+			}
+			.about-grid__info {
+				display: flex;
+				align-items: center;
+				position: relative;
+				gap: 8rem;
+			}
+			.about--grid__span::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 20.3rem;
+				width: 1px;
+				height: 4.6rem;
+				background-color: $color_white;
+			}
+			.about--grid__phone {
+				position: relative;
+				font-family: $font_1;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 24px;
+				color: $color_blue_transparent;
+				&::after {
+					position: absolute;
+					top: 0rem;
+					right: 20rem;
+					content: '';
+					background-image: url('../imgs/phone.svg');
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 4.6rem;
+					height: 4.6rem;
+				}
+				> a {
+					text-decoration: none;
+					font-family: $font_1;
+					font-weight: 600;
+					font-size: 2.4rem;
+					line-height: 2.4rem;
+					color: $color_black;
+				}
+			}
+		}
+	}
+
+//Common 
+
+	&__content-col {
+		width: 50%;
+		margin-right: 4.5rem;
+	}
+
+	&__img-in {
+		width: 57rem;
+		height: 61.6rem;
+	}
+
+	&__title {
+		font-family: $font_2;
+		font-weight: 700;
+		font-size: 4.8rem;
+		line-height: 5rem;
+		color: $color_dark;
+		margin-bottom: 2rem;
+	}
+
+	&__subtitle {
+		font-family: $font_1;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 3rem;
+		color: $color_grey_bolt_transparent;
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__accent {
+		color: $color_grey_bolt;
+	}
+}
