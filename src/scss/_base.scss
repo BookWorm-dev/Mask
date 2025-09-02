@@ -31,52 +31,29 @@ body {
 
 .section {
 	width: 100%;
+	&--hero {
+		position: relative;
+		display: flex;
+		max-height: 89.1rem;
+	}
 }
 
 .container {
-	// max-width: 126rem;
+	// max-width: 192rem;
 	width: 100%;
-
 	margin: 0 auto;
+	padding: 0 39rem;
 }
 
-/* remove */
-
-
-header,
-footer {
-	padding: 30px 6px;
-	display: flex;
-	align-items: center;
-	min-height: 120px;
-	font-size: 50px;
-	text-align: center;
-	justify-content: center;
-	background-color: #ccc;
-
-	// @include bp($point_2, min) {
-	// 	background-color: tomato;
-	// }
+.cover-img {
+	@extend %cover_img;
+	&--hero {
+		border-top-left-radius: 5rem;
+		border-top-right-radius: 5rem;
+		border-bottom-right-radius: 5rem;
+		border-bottom-left-radius: 0;
+	}
 }
-
-.hello {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	height: calc(100vh - 240px);
-	color: brown;
-	font-size: 5rem;
-
-	text-align: center;
-	// p {
-	// 	color: $color_black;
-	// }
+.contain-img {
+	@extend %contain_img;
 }
-
-h1 {
-	font-weight: normal;
-}
-
-/* remove */

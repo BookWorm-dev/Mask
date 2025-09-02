@@ -1,0 +1,76 @@
+@use './helpers/abstracts' as *;
+
+.content-col {
+	position: relative;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.hero {
+	display: flex;
+	gap: 5rem;
+	width: 100%;
+	&__img-in {
+		width: 49.6rem;
+		height: 74.4rem;
+		z-index: 99999999;
+	}
+
+	&__span {
+		margin-top: 23.7rem;
+		margin-bottom: 3rem;
+		color: $color_accent;
+		font-family: $font_2;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 3rem;
+	}
+	&__title {
+		font-family: $font_2;
+		font-weight: 700;
+		font-size: 7.2rem;
+		line-height: 8.2rem;
+		margin-bottom: 4rem;
+	}
+	&__subtitle {
+		font-family: $font_1;
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: $color_grey_2;
+		margin-bottom: 5.4rem;
+	}
+	&__link-in > .btn {
+		margin-right: 2rem;
+	}
+}
+
+.content-col--bg-image {
+	position: relative;
+	width: 50%;
+	padding-left: 7rem;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -7rem;
+		left: 4.5rem;
+		width: 95.2rem;
+		height: 96rem;
+		opacity: 0.99;
+		background:
+			linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+			url('../imgs/delivery_of_goods.jpg') no-repeat center/cover;
+		z-index: 1;
+		border-bottom-left-radius: 5rem;
+	}
+}
+
+.hero__img-in {
+	position: absolute;
+	top: 8rem;
+	left: 6rem;
+	width: 49.6rem;
+	height: 74.4rem;
+}
