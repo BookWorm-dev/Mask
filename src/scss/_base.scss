@@ -10,6 +10,7 @@ html,
 body {
 	height: 100%;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -120,4 +121,10 @@ body {
 	line-height: 5rem;
 	color: $color_dark;
 	margin-bottom: 2rem;
+}
+
+.icon-mobile-nav[data-toggle='mobile-close'] {
+	font-size: 2.4rem;
+	color: $color_dark;
+	display: none;
 }
