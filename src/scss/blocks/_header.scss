@@ -84,7 +84,10 @@
 		display: none;
 	}
 }
-@media (max-width: 768px) {
+
+//Mobile version
+
+@include bp($point_4) {
 	.header {
 		flex-direction: column;
 		padding: 1rem 2rem;
@@ -156,7 +159,7 @@
 
 					a {
 						font-size: 2rem;
-						color: #222;
+						color: $color_dark;
 						text-decoration: none;
 					}
 				}

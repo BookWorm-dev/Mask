@@ -75,6 +75,10 @@
 	height: 74.4rem;
 }
 
+
+//Mobile version
+
+
 @include bp($point_5) {
 	.section--hero {
 		min-height: auto;

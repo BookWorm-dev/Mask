@@ -40,7 +40,7 @@
 	}
 }
 
-// === about ===
+//  about
 .about {
 	display: flex;
 	margin-bottom: 8rem;
@@ -230,8 +230,7 @@
 }
 
 //Mobile version
-
-@media (max-width: 768px) {
+@include bp($point_4) {
 	.benefits {
 		min-width: auto;
 		margin-bottom: 6rem;
@@ -316,8 +315,7 @@
 				}
 
 				.about-grid__phone::after {
-					right: -15rem;
-					top: 1;
+					display: none;
 				}
 			}
 		}
