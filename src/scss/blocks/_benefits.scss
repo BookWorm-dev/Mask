@@ -24,16 +24,13 @@
 		min-width: 4rem;
 		height: 4rem;
 	}
-
 	&__title {
 		font-family: $font_1;
 		font-weight: 700;
 		font-size: 2rem;
 		line-height: 2.8rem;
-		color: $color_dark;
 		margin-bottom: 1.5rem;
 	}
-
 	&__subtitle {
 		font-family: $font_1;
 		font-weight: 400;
@@ -162,7 +159,7 @@
 				position: relative;
 				gap: 8rem;
 			}
-			.about--grid__span::before {
+			.about-grid__span::before {
 				position: absolute;
 				content: '';
 				top: 0;
@@ -171,7 +168,7 @@
 				height: 4.6rem;
 				background-color: $color_white;
 			}
-			.about--grid__phone {
+			.about-grid__phone {
 				position: relative;
 				font-family: $font_1;
 				font-weight: 600;
@@ -202,7 +199,7 @@
 		}
 	}
 
-//Common 
+	//Common
 
 	&__content-col {
 		width: 50%;
@@ -212,15 +209,6 @@
 	&__img-in {
 		width: 57rem;
 		height: 61.6rem;
-	}
-
-	&__title {
-		font-family: $font_2;
-		font-weight: 700;
-		font-size: 4.8rem;
-		line-height: 5rem;
-		color: $color_dark;
-		margin-bottom: 2rem;
 	}
 
 	&__subtitle {

@@ -39,6 +39,13 @@ body {
 	&--homepage {
 		position: relative;
 	}
+	&--why-we {
+		position: relative;
+	}
+	&--callback {
+		background-color: $color_accent;
+		min-height: 13.3rem;
+	}
 }
 
 .container {
@@ -75,6 +82,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url('../imgs/Vector_L.svg');
+	z-index: -1;
 }
 
 .vector-right {
@@ -83,8 +91,33 @@ body {
 	left: -33rem;
 	width: 109.3rem;
 	height: 146.1rem;
+	z-index: -1;
+
+	mix-blend-mode: Multiply;
+
 	background-position: left;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url('../imgs/Vector_R.svg');
+}
+
+.vector-big {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 161.4rem;
+	width: 192rem;
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../imgs/big_vector.svg');
+	z-index: -1;
+}
+.section-title {
+	font-family: $font_2;
+	font-weight: 700;
+	font-size: 4.8rem;
+	line-height: 5rem;
+	color: $color_dark;
+	margin-bottom: 2rem;
 }
