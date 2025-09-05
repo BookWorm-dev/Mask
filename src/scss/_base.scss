@@ -17,7 +17,9 @@ body {
 	font-family: $font_1;
 	font-weight: 400;
 }
-
+body.menu-open {
+	overflow: hidden;
+}
 .wrapper {
 	width: 100%;
 	display: flex;
@@ -32,17 +34,33 @@ body {
 
 .section {
 	width: 100%;
+
 	&--hero {
 		position: relative;
 		display: flex;
 		min-height: 89.1rem;
+
+		// Tablet / Medium screens
+		@include bp($point_3) {
+			flex-direction: row; // оставляем колонки
+			min-height: auto; // высота секции под контент
+		}
+
+		// Smaller tablets / large phones
+		@include bp($point_6) {
+			flex-direction: column; // колонки одна под другой
+			min-height: auto;
+		}
 	}
+
 	&--homepage {
 		position: relative;
 	}
+
 	&--why-we {
 		position: relative;
 	}
+
 	&--callback {
 		background-color: $color_accent;
 		min-height: 13.3rem;
@@ -50,19 +68,17 @@ body {
 }
 
 .container {
-	// max-width: 192rem;
+	max-width: 114rem;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 39rem;
+	padding: 0 1.5rem;
+	// padding: 0 39rem;
 }
 
 .cover-img {
 	@extend %cover_img;
 	&--hero {
-		border-top-left-radius: 5rem;
-		border-top-right-radius: 5rem;
-		border-bottom-right-radius: 5rem;
-		border-bottom-left-radius: 0;
+		border-radius: 5rem 5rem 5rem 0;
 	}
 }
 
@@ -105,7 +121,7 @@ body {
 .vector-big {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	height: 161.4rem;
 	width: 192rem;
 	background-position: right;
@@ -127,4 +143,12 @@ body {
 	font-size: 2.4rem;
 	color: $color_dark;
 	display: none;
+}
+
+@include bp($point_3) {
+	.section {
+		&--hero {
+			height: auto;
+		}
+	}
 }

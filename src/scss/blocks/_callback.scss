@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	column-gap: 27.3rem;
+	column-gap: 30%;
 	padding-top: 4.1rem;
 	padding-bottom: 3.9rem;
 
@@ -16,8 +16,10 @@
 		width: 3rem;
 		height: 3rem;
 		margin-right: 1.3rem;
+		flex-shrink: 0;
 	}
 	&__title {
+		text-wrap: nowrap;
 		font-family: $font_2;
 		font-weight: 500;
 		font-size: 2rem;
@@ -36,7 +38,9 @@
 	}
 }
 
-//Mobile version
+
+
+// ========== Tablet / Medium screens  ==========
 
 @include bp($point_4) {
 	.callback {
@@ -49,6 +53,47 @@
 		&__item {
 			flex-direction: row;
 			align-items: flex-start;
+			gap: 1rem;
+			width: 100%;
+		}
+
+		&__icon {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 1rem;
+			flex-shrink: 0;
+		}
+
+		&__title {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			margin-bottom: 0.3rem;
+		}
+
+		.address,
+		.phone,
+		.email {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+
+		.callback-content {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+@include bp($point_5) {
+	.callback {
+		flex-direction: column;
+		column-gap: 0;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		row-gap: 2rem;
+
+		&__item {
+			flex-direction: row;
 			gap: 1rem;
 			width: 100%;
 		}

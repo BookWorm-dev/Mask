@@ -85,7 +85,7 @@
 	}
 }
 
-//Mobile version
+// ========== Tablet / Medium screens   ==========
 
 @include bp($point_4) {
 	.header {
@@ -115,7 +115,7 @@
 			right: 1rem;
 			width: 30px;
 			height: 30px;
-			background: url('../imgs/mobile/hamburger.png') center/contain no-repeat;
+			background: url('../imgs/mobile/menu-btn.svg') center/contain no-repeat;
 			border: none;
 			cursor: pointer;
 			z-index: 99;
@@ -136,7 +136,7 @@
 			visibility: hidden;
 			pointer-events: none;
 			transition: all 0.5s;
-			z-index: 100;
+			z-index: 999999;
 
 			&.header__nav--active {
 				transform: translateX(0);
@@ -183,6 +183,34 @@
 				cursor: pointer;
 				z-index: 101;
 			}
+		}
+	}
+}
+
+@include bp($point_5, min) {
+	.header {
+		flex-direction: column;
+		padding: 1rem 2rem;
+		height: auto;
+		position: relative;
+
+		&__inner {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+		&__nav {
+			align-items: center;
+		}
+
+		&__logo {
+			display: none;
+		}
+
+		.btn--header {
+			width: 80%;
+			padding: 0.5rem 1rem;
 		}
 	}
 }

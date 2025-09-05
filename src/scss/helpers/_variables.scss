@@ -13,6 +13,7 @@ $color_dark: #0c122d;
 
 $color_grey: #c4c4c4;
 $color_grey_2: #575c74;
+$color_grey_bg: #ecf0f5;
 $color_grey_bolt: #616777;
 $color_grey_bolt_transparent: rgba(97, 103, 119, 0.7);
 $color_grey_bolt_transparent_2: rgba(87, 92, 116, 1);
@@ -30,7 +31,7 @@ $transition_dur: 0.3s;
 // breakpoints
 $point_1: 1200px;
 $point_2: 1024px; /* ! */
-$point_3: 1023.98px;
+$point_3: 1024px;
 $point_4: 768px; /* ! */
 $point_5: 767.98px;
 $point_6: 480px;

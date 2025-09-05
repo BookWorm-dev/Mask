@@ -15,7 +15,10 @@
 			</div>
 			<div class="content-col content-col--bg-image">
 				<div class="hero__img-in">
-					<img class="cover-img cover-img--hero" src="../imgs/woman_in_a_mask.jpg" alt="wonam in a mask" />
+					<picture>
+						<source srcset="../imgs/woman_in_a_mask(480).webp 480w, ../imgs/woman_in_a_mask(768).webp 768w, ../imgs/woman_in_a_mask(1024).webp 1024w, ../imgs/woman_in_a_mask-1920.webp 1920w" type="image/webp" sizes="(max-width: 768px) 100vw, 50vw" />
+						<img class="cover-img cover-img--hero" src="../imgs/woman_in_a_mask-1920.webp" alt="woman in a mask" />
+					</picture>
 				</div>
 			</div>
 		</div>
